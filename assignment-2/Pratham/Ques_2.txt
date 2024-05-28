@@ -1,0 +1,30 @@
+## Using Recursion tree method to get general pattern:
+T(n)= T(n/2)+1
+T(n/2)= T(n/4)+1
+
+T(n) = T(n/4)+1+1 = T(n/4)+2
+
+again,
+T(n/4) = T(n/8)+1
+
+T(n) = T(n/8)+3
+
+Generalizing the pattern:
+T(n)= T(n/4) + 2
+    = T(n/8) + 3
+    .
+    .
+    .
+    = T(n/(2^k)) + k
+
+Solving for k:
+n/(2^k) = 1 
+n = 2^k
+
+=> k = log2 n
+
+Subsituting:
+
+T(n) = T(1) + log2 n
+T(n) = 1 + log2 n
+     = O(logn)   (as dominant term is log2 n)

@@ -1,0 +1,9 @@
+* The outer loop iterates from i = 0 to n - 1. The outer loop looks at each number in that list one by one.
+ So,it has a time complexity of O(n).
+* For each number in the list that the outer loop is looking at, the inner loop checks other numbers in the
+list to see if they're smaller than the current number being looked at by the outer loop.
+* In the worst-case scenario, for each number the outer loop looks at, the inner loop might have to go 
+through almost the entire list to find numbers smaller than the current one.
+* This results in a worst-case time complexity of O(n^2).
+
+Therefore, the overall time complexity of the given code is O(n^2) due to nested loop.
